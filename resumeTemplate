@@ -1,0 +1,167 @@
+\documentclass[]{resume-openfont}
+
+\pagestyle{fancy}
+\resetHeaderAndFooter
+
+%--------------------------------------------------------------
+% Convenience command - make it easy to fill template
+
+% Create job position command. Parameters: company, position, location, when
+
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+
+% Create education heading. Parameters: Name, degree, location, when
+\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
+\descript{#2}\fakeNewLine}
+
+% Create project heading. Parameters: Name, link, Tech stack
+\newcommand{\projectHeading}[3]{\Project{#1}{#2}
+\descript{#3}\\}
+
+\newcommand{\projectHeadingWithDate}[4]{\Project{#1}{#2}
+\descript{#3 | #4}\\}
+
+% Parameters: courses
+\newcommand{\courseWork}[1]{\textbf{Coursework:} #1}
+
+% Parameters: courses
+\newcommand{\teacherAssistant}[1]{\textbf{Teacher Assistant (TA):} #1}
+ 
+%--------------------------------------------------------------
+\begin{document}
+
+%--------------------------------------------------------------
+%     Profile
+%--------------------------------------------------------------
+\newcommand{\yourName}{Sri Nishanth Molleti}
+% How you want it to show up on the resume
+\newcommand{\yourWebsite}{}
+% vs how you want it to show up. If it's you can just replace "\yourWebsiteLink" with "yourWebsite"
+\newcommand{\yourEmail}{nishanth.molleti9@gmail.com}
+\newcommand{\yourPhone}{6304047080}
+\newcommand{\githubUserName}{NishanthMolleti}
+\newcommand{\linkedInUserName}{sri-nishanth-molleti}
+
+% An alternate profile section 
+% \alignProfileTable
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%     \ralewayBold{\href{\yourWebsiteLink}{\Large \yourName}} & 
+%     Email : \href{mailto:\yourEmail}{\yourEmail}
+%     \\
+%     \href{https://github.com/\githubUserName}{GitHub://\githubUserName} & 
+%     Mobile : \yourPhone
+%     \\
+%     \href{https://www.linkedin.com/in/\linkedInUserName}{LinkedIn://\linkedInUserName} & Website : \href{\yourWebsiteLink}{\yourWebsite}
+%     \\
+% \end{tabular*}
+
+\begin{center}
+    \Huge \scshape \latoRegular{\yourName} \\ \vspace{1pt}
+    \small \href{mailto:\yourEmail}{\underline{\yourEmail}}  $|$  \yourPhone $|$ 
+    \href{https://www.linkedin.com/in/\linkedInUserName}{\underline{linkedIn/\linkedInUserName}} $|$
+    \href{https://github.com/\githubUserName}{\underline{github/\githubUserName}} 
+    % $|$ \href{\yourWebsiteLink}{\underline{\yourWebsite}}
+\end{center}
+
+%--------------------------------------------------------------
+%     Education
+%--------------------------------------------------------------
+\section{Education}
+% Put school first and degree second if your school is reputable
+\educationHeading{BTech in COMPUTER SCIENCE ENGINEERING }{VIGNAN INSTITUTE OF TECHNOLOGY AND SCIENCE }{HYDERABAD,INDIA}{Jun 2018-Jun 2022}
+\begin{bullets}
+    \item CGPA : 7.47 
+\end{bullets}
+
+\sectionsep
+
+%--------------------------------------------------------------
+%     Experience
+%--------------------------------------------------------------
+
+\section{Experience }
+\begin{bullets}
+    \item Currently working as a 6 month intern at Rakuten . 
+   \end{bullets}
+\sectionsep
+\section{Achievements}
+\projectHeading{ACM-ICPC}{https://codedrills.io/contests/icpc-amritapuri-2020-regional-round/scoreboard}{}{}
+\begin{bullets}
+    \item Qualified to ACM-ICPC AMRITAPURI REGIONALS - 2020 .
+    %  \item Here is another bullet that I might choose to uncomment for some jobs
+    \item Team Name : vector<nbr> .
+    \item Ranked \textbf{631 out of 7244 teams} .
+\end{bullets}
+\sectionsep
+
+\projectHeading{TOP RATED CODER IN COLLEGE}{https://rb.gy/bcfouq}{}{}
+\begin{bullets}
+    \item Highest rating \textbf{1716} on codechef .
+\end{bullets}
+\sectionsep
+
+\resumeHeading{Global rank}{}{}{}
+\begin{bullets}
+    \item Best global rank in a codechef contest is \textbf{162 out of 9983 } participants . 
+    \item Best overall rank on codechef is \textbf{33649 out of 390971 } active users .
+\end{bullets}
+\sectionsep
+
+\section{PROGRAMMING HANDLES}
+\projectHeading{codechef}{https://www.codechef.com/users/nishanth271199}{}
+\projectHeading{codeforces}{https://codeforces.com/profile/nim0_d_loser}{}
+\projectHeading{Leetcode}{https://leetcode.com/nim0_d_loser/}{}
+\projectHeading{Github}{https://github.com/NishanthMolleti}{}
+
+
+\sectionsep
+%--------------------------------------------------------------
+%     Projects
+%--------------------------------------------------------------
+\section{Projects}
+
+\projectHeading{Pathfinding Visualization}{https://github.com/NishanthMolleti/PATHFINDING-VISUALIZATION-}{Python,A* pathfinding algorithm,tkinter,pygame}
+A visualization tool so as to show graphically how the path between 2 vertices on a graph . Uses a 2D array as a graph . Animations are done using pygame .\\
+\sectionsep
+  
+\projectHeading{SPOTIFY CLONE}{https://github.com/NishanthMolleti/Spotify_Clone}{ React, JavaScript,CSS,spotify API}
+An application like spotify to hear music . Bulit using react , node js . \href{https://www.cs.utexas.edu/~bwaters/publications/papers/cp-abe.pdf}{CP-ABE} encryption and used it to ensure files are secure at rest.\\
+\sectionsep
+
+\projectHeading{Calculator App}{https://github.com/NishanthMolleti/Calculator-App}{Python, tkinter}
+A program that creates a caluculator that has the capability of performing all sorts of arithmatic calculations . It is written in python with the help of tkinter .
+\sectionsep
+
+\projectHeading{Face detection}{https://github.com/NishanthMolleti/FACE-DETECTION-IN-REALTIME-}{python,haarcascade class from object detection}
+It is an app that detects the presence of faces if any in realtime using the device's webcam . It uses haarcascade class from the object detection .\\
+\sectionsep
+
+
+
+% Example using bullets and dates 
+% \projectHeadingWithDate{Hogwart\textquotesingle{}s Library Management System}{https://github.com/Aarif123456/hogwartslibrary}{PHP, JavaScript, HTML, CSS, MySQL}{Aug 2019}
+% \begin{bullets}
+    % \item A full-stack library management system, where users can manage books and holds on their accounts. Users can search the library\textquotesingle{}s catalogue, which has every book mentioned in the Harry Potter series. The system distinguishes between 4 users. For examples, librarians who can also check or return books on behalf of users.\\
+% \end{bullets}
+% \sectionsep
+  
+
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+\section{Skills}
+\begin{skillList}
+    \singleItem{}{Java, C++, Python, C , SQL , STL , Problem Solving , DSA , HTML , CSS , JavaScript}
+    \\
+ 
+\end{skillList}
+
+% A more concise alternate 
+% \begin{skillList}
+%     \doubleItem{Languages:}{Java, C++, Python, C\#, PHP, Prolog, Bash, C, Racket}%
+%     {Databases:}{SQL, MongoDB, Neo4j, DynamoDB}
+%     \\
+%     \doubleItem{Web Development:}{JavaScript, TypeScript, React, HTML/CSS}
+%     {Technology:}{Git, AWS, GCP, Azure, Docker, \LaTeX}%
+% \end{skillList}
+\end{document}
